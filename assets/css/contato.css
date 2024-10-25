@@ -1,0 +1,228 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: var(--fonte-p);
+}
+.kaisei-harunoumi-regular {
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .kaisei-harunoumi-medium {
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .kaisei-harunoumi-bold {
+    font-family: "Kaisei HarunoUmi", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+:root{
+    --fonte-p: 'Kaisei HarunoUmi', serif;
+    --cor-fundo-branco: #ffffff;
+    --cor-fundo-transparente: rgba(0, 0, 0, 0);
+    --cor-texto-preto: #000000;
+    --cor-texto-branco: #ffffff;
+    --espaco-item-menu: 45px;
+    --largura-wrapper: 95%;
+    --cor-hover: #ccc;
+    --altura-linha: 2px;
+    --cor-h1-hover: rgba(255, 255, 255, 0.738); 
+}
+.header1, .header2 {
+    background-color: black; 
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    padding: 20px 0;
+}
+
+.header1 .wrapper, .header2 .wrapper {
+    width: 95%; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo{
+    color: white; /* Texto branco */
+    text-decoration: none;
+    font-size: 36px;
+    transition: color 0.3s;
+}
+
+.header1 .logo a:hover, .header2 .logo a:hover {
+    color: grey; 
+}
+
+.header1 .menu ul, .header2 .menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.header1 .menu ul li, .header2 .menu ul li {
+    margin-left: 30px; /* Espaçamento entre os itens */
+}
+
+.header1 .menu ul li a, .header2 .menu ul li a {
+    color: white; /* Links brancos */
+    font-size: 19px;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.header1 .menu ul li a:hover, .header2 .menu ul li a:hover {
+    color: grey; /* Efeito hover para links */
+    transform: scale(1.05);
+}
+
+/* Sublinha o item ao passar o mouse */
+.header1 .menu ul li a::before, .header2 .menu ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Altura da linha */
+    background-color: white; /* Cor da linha */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.header1 .menu ul li a:hover::before, .header2 .menu ul li a:hover::before {
+    transform: scaleX(1);
+}
+
+h1{
+    font-size: 33px;
+    padding: 20px;
+}
+.telefone{
+    font-size: 15px;
+    padding-left: 20px;
+}
+h2{
+    font-size: 26px;
+    padding: 20px;
+}
+.localizacao{
+    font-size: 15px;
+    padding-left: 25px;
+
+}
+.formulario{
+    font-size: 20px;
+    flex-direction: column;
+    text-align: center;
+    margin-right:80px;
+
+}
+.bet{
+    display: flex;
+    justify-content: space-between;
+}
+.info{
+    padding: 50px;
+
+}
+.dados{
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 30px;
+}
+.info2{
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, .075);
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-family: sans-serif, Helvetica, Arial ;
+    margin: 5px;
+}
+.info2:hover{   
+    border-color: rgb(8, 121, 121);
+    background-color: rgb(230, 230, 230);
+}
+.msgBox{
+    margin-top: 15px;;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, .075);
+    font-size: 14px;
+    border: 5px solid #7d7d7d;
+    border-radius: 4px;
+    font-family: sans-serif, Helvetica, Arial ;
+    padding: 30px; 
+}
+.nome{
+    font-size: 15px;
+    margin: 5px;
+}
+.email{
+    font-size: 15px;
+    margin: 5px;
+}
+.tel{
+    font-size: 15px;
+    margin: 5px;
+}
+.assunto{
+    font-size: 15px;
+    margin: 5px;
+}
+.mensagem{
+    font-size: 20px;
+}
+.enviar{
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: white;
+    background-color:black;
+    border-radius: 12px;
+    border-color: #8e8cb7;
+    transition: all 0.3s ease;
+}
+.enviar:hover{
+    transform: scale(1.1);
+    background-color: rgb(32, 31, 31);
+    cursor: pointer;
+}
+.dpBlock{
+    display: block;
+}
+b{
+    font-size: x-large;
+    font-weight: 10000;
+    margin-left: 20px;
+}
+h3{
+    font-size: x-large;
+    margin: 40px;
+    background-color: var(--cor-texto-preto);
+    color: var(--cor-texto-branco);
+    padding: 20px;
+    text-align: center;
+}
+
+#msg {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.mensagem {
+    transition: opacity 1s ease; 
+    opacity: 1; 
+}
+
+.esconder {
+    opacity: 0;
+}

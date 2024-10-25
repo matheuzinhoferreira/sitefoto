@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    transition: all 0.3s;
+    font-family: var(--fonteum);
+}
+
+:root {
+    --fonteum: "Kaisei HarunoUmi", serif;
+}
+.catalogo {
+    color:black;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-left: 70px;
+}
+
+.foto {
+    transition: filter 0.5s ease, opacity 0.5s ease;
+    
+}
+
+.foto:hover {
+    filter: brightness(0.3);
+    opacity: 0.8;
+}
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 10px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto;
+}
+
+.galeria img {
+    width: 100%;
+    height: auto;
+    display: block;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+.logo {
+    padding-left: 0;
+}
+/* Estilo da Header */
+.header1, .header2 {
+    background-color: black; 
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    padding: 20px 0;
+}
+
+.header1 .wrapper, .header2 .wrapper {
+    width: 95%; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titulo{
+    color: white; /* Texto branco */
+    text-decoration: none;
+    font-size: 36px;
+    transition: color 0.3s;
+}
+
+.header1 .logo a:hover, .header2 .logo a:hover {
+    color: #ccc;
+}
+
+.header1 .menu ul, .header2 .menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.header1 .menu ul li, .header2 .menu ul li {
+    margin-left: 45px; /* Espaçamento entre os itens */
+}
+
+.header1 .menu ul li a, .header2 .menu ul li a {
+    color: white; /* Links brancos */
+    font-size: 19px;
+    text-decoration: none;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.header1 .menu ul li a:hover, .header2 .menu ul li a:hover {
+    color: #ccc; /* Efeito hover para links */
+    transform: scale(1.05);
+}
+
+/* Sublinha o item ao passar o mouse */
+.header1 .menu ul li a::before, .header2 .menu ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; /* Altura da linha */
+    background-color: white; /* Cor da linha */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.header1 .menu ul li a:hover::before, .header2 .menu ul li a:hover::before {
+    transform: scaleX(1);
+}
+footer {
+    background-color: black;
+}
+.apps {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 530px;
+  }
+  
+  .apps .icon {
+    position: relative;
+    background: #fff;
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .apps .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: black;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .apps .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: black;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .apps .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .apps .icon:hover span,
+  .apps .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+
+.foto {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    transform: translateY(20px);
+}
+
+.foto.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+  
